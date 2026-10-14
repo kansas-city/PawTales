@@ -88,7 +88,7 @@ netlify deploy --prod --dir .
 - [ ] Write or unlink the 3 referenced-but-missing articles:
       `blog/fostering-101-guide.html`, `blog/introducing-new-pet-to-existing-pets.html`,
       `blog/pet-safe-cleaning-home.html`.
-- [ ] Replace `hello@pawtales.example.com` with a real, monitored mailbox.
+- [x] Contact address set to `pawtales.678@gmail.com` across all pages and JSON-LD.
 - [ ] Point the contact and newsletter forms at a real backend (Netlify Forms,
       Formspree, or similar) — they are currently client-side demo handlers only.
 - [ ] Add a custom domain under **Site settings → Domain management** if desired.
