@@ -3,7 +3,7 @@
 A static pet-owner blog and animal rescue newsletter site — hand-built HTML, CSS and
 vanilla JavaScript. No build step, no dependencies, no framework.
 
-- **Live site (Netlify):** _add your Netlify URL here after the first deploy_
+- **Live site (Netlify):** https://pawtales.netlify.app
 - **Repository:** https://github.com/kansas-city/PawTales
 
 ## Project structure
@@ -23,7 +23,8 @@ vanilla JavaScript. No build step, no dependencies, no framework.
 ├── assets/
 │   ├── css/style.css           # Single stylesheet
 │   └── js/main.js              # Nav, forms, scroll reveal, progress bar
-├── robots.txt                  # Crawler rules (update the domain!)
+├── robots.txt                  # Crawler rules
+├── sitemap.xml                 # All 19 live pages
 ├── netlify.toml                # Netlify build + header configuration
 └── .gitignore
 ```
@@ -78,11 +79,16 @@ netlify deploy --prod --dir .
 
 ## Post-deploy checklist
 
-- [ ] Replace the placeholder domain `www.pawtales.example.com` in every page's
-      `<link rel="canonical">`, Open Graph, Twitter and JSON-LD tags with the real
-      domain (Netlify subdomain or a custom domain).
-- [ ] Update `robots.txt` with the real domain and add a `sitemap.xml`.
-- [ ] Update `hello@pawtales.example.com` to a real, monitored mailbox.
+- [x] Canonical / Open Graph / Twitter / JSON-LD tags point at
+      `https://pawtales.netlify.app` (update these if you move to a custom domain).
+- [x] `robots.txt` and `sitemap.xml` reference the live domain.
+- [ ] Add the missing Open Graph images under `assets/img/`
+      (`logo.png`, `og-home.jpg`, `og-blog.jpg`, `og-about.jpg`, `og-contact.jpg`,
+      `og-newsletter.jpg`) — they are referenced but the folder does not exist yet.
+- [ ] Write or unlink the 3 referenced-but-missing articles:
+      `blog/fostering-101-guide.html`, `blog/introducing-new-pet-to-existing-pets.html`,
+      `blog/pet-safe-cleaning-home.html`.
+- [ ] Replace `hello@pawtales.example.com` with a real, monitored mailbox.
 - [ ] Point the contact and newsletter forms at a real backend (Netlify Forms,
       Formspree, or similar) — they are currently client-side demo handlers only.
 - [ ] Add a custom domain under **Site settings → Domain management** if desired.

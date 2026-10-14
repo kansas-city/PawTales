@@ -14,6 +14,9 @@ desktop.ini
 # Netlify
 .netlify/
 
+# Local agent/workspace data (internal notes — not part of the published site)
+.workbuddy-ai/
+
 # Logs
 *.log
 npm-debug.log*

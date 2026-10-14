@@ -1,8 +1,8 @@
 # PawTales — robots.txt
-# TODO: replace the example domain below with your live Netlify/custom domain.
+# Live site: https://pawtales.netlify.app
 
 User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://www.pawtales.example.com/sitemap.xml
+Sitemap: https://pawtales.netlify.app/sitemap.xml
