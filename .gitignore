@@ -1,0 +1,30 @@
+# --------------------------------------------------------------------------
+# PawTales — Git ignore rules
+# --------------------------------------------------------------------------
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# Netlify
+.netlify/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env
+.env
+.env.local
+
+# --------------------------------------------------------------------------
+# Reference-only file: a saved copy of the Xtreme Cleans website.
+# Not part of the PawTales site and not linked from any page, so it is kept
+# out of the repository and out of the Netlify deploy.
+# --------------------------------------------------------------------------
+xtreme_page.html

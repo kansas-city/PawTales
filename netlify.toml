@@ -1,0 +1,36 @@
+# ==========================================================================
+# Netlify configuration — PawTales Rescue & Pet Care
+# Static HTML site: no build step, the repository root is the publish dir.
+# ==========================================================================
+
+[build]
+  # No framework / bundler — serve files directly from the repo root.
+  publish = "."
+
+# --------------------------------------------------------------------------
+# Custom 404 page (Netlify serves /404.html automatically when present)
+# --------------------------------------------------------------------------
+# Nothing to declare — 404.html in the publish root is picked up by default.
+
+# --------------------------------------------------------------------------
+# Security & caching headers
+# --------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    # Static assets change rarely; revalidate daily so updates go live fast.
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
+# --------------------------------------------------------------------------
+# Pretty URLs — serve /about instead of /about.html (optional convenience).
+# The canonical <link> tags still point at the .html versions.
+# --------------------------------------------------------------------------
+# Netlify "Pretty URLs" is enabled by default in the UI; no rule needed.
